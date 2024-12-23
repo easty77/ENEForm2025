@@ -1,0 +1,34 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Flights</title>
+</head>
+<body>
+<h2>Runs:</h2>
+<table>
+<tr>
+    <th>Name</th>
+<th>Course</th>
+    <th>Date</th>
+    <th>Title</th>
+    <th>Jockey</th>
+    <th>Trainer</th>
+
+</tr>
+
+
+<tr th:each="run:${runs}">
+<td th:text="${run.name}"></td>
+<td th:text="${run.race.course}"></td>
+    <td th:text="${run.race.meetingDate}"></td>
+    <td th:text="${run.race.raceName}"></td>
+    <td th:text="${run.jockeyName}"></td>
+    <td th:text="${run.trainerName}"></td>
+</tr>
+
+
+</table>
+</body>
+</html>
